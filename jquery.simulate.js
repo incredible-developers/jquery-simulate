@@ -14,7 +14,7 @@
 var rkeyEvent = /^key/,
 	rmouseEvent = /^(?:mouse|contextmenu)|click/;
 
-$.fn.simulate = function( type, options ) {
+$.fn.vssimulate = function( type, options ) {
 	return this.each(function() {
 		new $.simulate( this, type, options );
 	});

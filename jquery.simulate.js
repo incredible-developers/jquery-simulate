@@ -291,7 +291,7 @@ function findCorner( elem ) {
 	};
 }
 
-$.extend( $.simulate.prototype, {
+$.extend( $.vssimulate.prototype, {
 	simulateDrag: function() {
 		var i = 0,
 			target = this.target,

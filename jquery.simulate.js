@@ -16,11 +16,11 @@ var rkeyEvent = /^key/,
 
 $.fn.vssimulate = function( type, options ) {
 	return this.each(function() {
-		new $.simulate( this, type, options );
+		new $.vssimulate( this, type, options );
 	});
 };
 
-$.simulate = function( elem, type, options ) {
+$.vssimulate = function( elem, type, options ) {
 	var method = $.camelCase( "simulate-" + type );
 
 	this.target = elem;
@@ -33,7 +33,7 @@ $.simulate = function( elem, type, options ) {
 	}
 };
 
-$.extend( $.simulate, {
+$.extend( $.vssimulate, {
 
 	keyCode: {
 		BACKSPACE: 8,
@@ -67,7 +67,7 @@ $.extend( $.simulate, {
 	}
 });
 
-$.extend( $.simulate.prototype, {
+$.extend( $.vssimulate.prototype, {
 
 	simulateEvent: function( elem, type, options ) {
 		var event = this.createEvent( type, options );
